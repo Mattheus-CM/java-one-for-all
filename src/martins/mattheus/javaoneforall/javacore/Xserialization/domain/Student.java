@@ -3,7 +3,6 @@ package martins.mattheus.javaoneforall.javacore.Xserialization.domain;
 import java.io.*;
 
 public class Student implements Serializable {
-    @Serial
     private static final long serialVersionUID = 2860882953976732807L;
     private Long id;
     private String name;
@@ -18,7 +17,6 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    @Serial
     private void writeObject(ObjectOutputStream objectOutputStream) {
         try {
             objectOutputStream.defaultWriteObject();
@@ -28,7 +26,6 @@ public class Student implements Serializable {
         }
     }
 
-    @Serial
     private void readObject(ObjectInputStream objectInputStream) {
         try {
             objectInputStream.defaultReadObject();
